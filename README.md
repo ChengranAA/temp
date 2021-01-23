@@ -7,6 +7,7 @@ Date: 20200123
 ## installation
 
 ```zsh
+cd to/the/path/of/your/directory
 chmod a+x install.sh
 sh install.sh
 ```
