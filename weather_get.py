@@ -1,11 +1,15 @@
 import requests
 import geoip2.database
-
+import os
 def getWeather(lang="en"):
+
+    # path to database
+    path_to_script = os.path.dirname(os.path.realpath(__file__))
+    path_to_data_base = path_to_script + "/GeoLite2-City_20210122/GeoLite2-City.mmdb"
 
     # find local city name
     IP_address = requests.get('http://ifconfig.me/ip', timeout=1).text.strip()
-    reader = geoip2.database.Reader("/Users/andrewli/myscript/weather_message/GeoLite2-City_20210122/GeoLite2-City.mmdb")
+    reader = geoip2.database.Reader(path_to_data_base)
             ## change this directory to your working directory
 
     response = reader.city(IP_address)
