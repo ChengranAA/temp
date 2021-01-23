@@ -17,6 +17,7 @@ sh install.sh
 
 - Only works for MacOS with zsh shell
 
+- Please unzip the data file in the current directory
 
 
 ## Run
